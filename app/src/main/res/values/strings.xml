@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Material-CalendarView</string>
+    <string name="today_attendance">오늘의 출석</string>
 </resources>
