@@ -13,6 +13,7 @@ abstract class RoomDatabase : androidx.room.RoomDatabase() {
 
     companion object {
         private var INSTANCE : RoomDatabase? = null
+
         fun getInstance(context: Context) : RoomDatabase? {
             if (INSTANCE == null) INSTANCE = Room.databaseBuilder(context.applicationContext, RoomDatabase::class.java, "room.db").build()
             return INSTANCE

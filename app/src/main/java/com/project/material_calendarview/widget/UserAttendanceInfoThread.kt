@@ -20,8 +20,11 @@ class UserAttendanceInfoThread(private val context: Context, private val type: I
 
     private fun getUserAttendanceInfo() {
         val attendanceInfoList = RoomDatabase.getInstance(context)?.getAttendanceDao()?.getUserAttendanceInfo(1)
+        if (attendanceInfoList?.isNotEmpty() == true) {
+            this.isSuccess = true
+            this.attendanceInfoList = attendanceInfoList as ArrayList<AttendanceEntity>
+        }
         this.isFinished = true
-        this.attendanceInfoList = attendanceInfoList as ArrayList<AttendanceEntity>
     }
 
     private fun insertUserAttendanceInfo() {
