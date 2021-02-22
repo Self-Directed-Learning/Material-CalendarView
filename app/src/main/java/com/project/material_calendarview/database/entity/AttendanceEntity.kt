@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "attendance_table")
 class AttendanceEntity(
-    @PrimaryKey val idx: Int,
+    @PrimaryKey(autoGenerate = true) val idx: Int?,
     val user_idx: Int,
     val attendance_time: Long
 )
