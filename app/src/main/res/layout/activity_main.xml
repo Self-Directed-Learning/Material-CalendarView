@@ -38,10 +38,23 @@
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mcv_selectionColor="@color/color_4571E6"
+            app:mcv_selectionMode="none"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_attendance"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/color_4571E6"
+            android:onClick="@{() -> viewModel.selectAttendanceEvent()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
